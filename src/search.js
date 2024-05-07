@@ -2,8 +2,10 @@ function searchProject(projectName, projectList) {
   if (projectList.length === 0) {
     return "";
   }
-  if (projectList[0] === projectName) {
-    return projectList[0];
+  for (const actualProject in projectList) {
+    if (projectList[actualProject] === projectName) {
+      return projectList[actualProject];
+    }
   }
 }
 

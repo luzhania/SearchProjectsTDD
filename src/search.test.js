@@ -10,4 +10,11 @@ describe("Search", () => {
     projects.push("Saludador");
     expect(searchProject("Saludador", projects)).toEqual("Saludador");
   });
+  it("should find one project when there's in the list with many projects", () => {
+    let projects = [];
+    projects.push("Saludador");
+    projects.push("Fizz buzz");
+    projects.push("Calculadora");
+    expect(searchProject("Fizz buzz", projects)).toEqual("Fizz buzz");
+  });
 });
