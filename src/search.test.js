@@ -5,4 +5,9 @@ describe("Search", () => {
     let projects = [];
     expect(searchProject("Saludador", projects)).toEqual("");
   });
+  it("should find one project when there's in the list with only 1 project", () => {
+    let projects = [];
+    projects.push("Saludador");
+    expect(searchProject("Saludador", projects)).toEqual("Saludador");
+  });
 });
