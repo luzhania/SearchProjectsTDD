@@ -7,6 +7,7 @@ function searchProject(projectName, projectList) {
       return projectList[actualProject];
     }
   }
+  return "";
 }
 
 export default searchProject;

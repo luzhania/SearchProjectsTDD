@@ -17,4 +17,11 @@ describe("Search", () => {
     projects.push("Calculadora");
     expect(searchProject("Fizz buzz", projects)).toEqual("Fizz buzz");
   });
+  it("shouldn't find projects when there is no match in the projects list", () => {
+    let projects = [];
+    projects.push("Saludador");
+    projects.push("Fizz buzz");
+    projects.push("Calculadora");
+    expect(searchProject("Bowling kata", projects)).toEqual("");
+  });
 });
