@@ -1,15 +1,15 @@
-import sumar from "./sumador";
+import searchProject from "./search.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const searchedProjectNameInput = document.querySelector("#project-name");
+const searchedProjectForm = document.querySelector("#search-project-form");
+const div = document.querySelector("#result-div");
 
-form.addEventListener("submit", (event) => {
+let projects = [];
+
+searchedProjectForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const searchedProjectName = searchedProjectNameInput.value;
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + searchProject(searchedProjectName, projects) + "</p>";
 });
