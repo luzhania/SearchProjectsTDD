@@ -4,7 +4,7 @@ function searchProject(projectName, projectList) {
     return "";
   }
   for (const actualProject in projectList) {
-    if (projectList[actualProject] === projectName) {
+    if (projectList[actualProject].includes(projectName)) {
       searchedProjects.push(projectList[actualProject]);
     }
   }

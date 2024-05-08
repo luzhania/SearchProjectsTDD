@@ -33,4 +33,14 @@ describe("Search", () => {
     projects.push("Calculador");
     expect(searchProject("Calculador", projects)).toEqual("Calculador, Calculador, Calculador");
   });
+  it("should find many projects whose name begins with the search criteria", () => {
+    let projects = [];
+    projects.push("Saludador");
+    projects.push("Calculadora");
+    projects.push("Fizz buzz");
+    projects.push("Calculador de impuestos");
+    projects.push("Bowling kata");
+    projects.push("Calculador de descuentos");
+    expect(searchProject("Calcu", projects)).toEqual("Calculadora, Calculador de impuestos, Calculador de descuentos");
+  });
 });
