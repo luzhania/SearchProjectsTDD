@@ -24,4 +24,13 @@ describe("Search", () => {
     projects.push("Calculadora");
     expect(searchProject("Bowling kata", projects)).toEqual("");
   });
+  it("should find many projects when there are more than one match in the projects list", () => {
+    let projects = [];
+    projects.push("Saludador");
+    projects.push("Calculador");
+    projects.push("Fizz buzz");
+    projects.push("Calculador");
+    projects.push("Calculador");
+    expect(searchProject("Calculador", projects)).toEqual("Calculador, Calculador, Calculador");
+  });
 });
